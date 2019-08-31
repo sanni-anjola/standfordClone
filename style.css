@@ -18,14 +18,9 @@ footer {
     width: 100%;
 }
 
-h1.topnav-heading {
-    display: inline-block;
-    width: 20%;
-    font-family: "Source Serif Pro", serif;
-    font-size: 28px;
-    line-height: 35px;
-    color: #fff;
-    margin: auto 30px;
+header {
+    position: sticky;
+    top: 0;
 }
 
 div.topnav {
@@ -34,12 +29,26 @@ div.topnav {
     font-size: 18px;
     line-height: 29px;
     display: flex;
+    overflow: hidden;
+}
+
+h1.topnav-heading {
+    display: inline-block;
+    width: 50%;
+    font-family: "Source Serif Pro", serif;
+    font-size: 26px;
+    line-height: 35px;
+    color: #fff;
+    margin: auto 5px;
+    padding: 0 10px;
+    cursor: pointer;
 }
 
 div.topnav ul {
     list-style: none;
-    width: 80%;
-    margin: auto 30px;
+    width: 100%;
+    margin: auto 15px;
+    margin-left: 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -48,14 +57,147 @@ div.topnav ul li {
     display: inline-block;
 }
 
+div.topnav ul li.hide {
+    display: none;
+}
+
+
 div.topnav ul li a {
     display: block;
     text-decoration: none;
     color: #fff;
-    padding: 12px;
+    padding: 12px 10px;
 
 }
 
 div.topnav ul li a:hover {
     background-color: #8C1515
+}
+
+div.second-topnav {
+    background-color: #fff;
+    box-shadow: 0 3px 1px #ddd;
+}
+
+div.second-topnav ul {
+    list-style: none;
+    width: 100%;
+    margin: auto 30px;
+    display: flex;
+    justify-content: center;
+}
+
+div.second-topnav ul li {
+    display: inline-block;
+}
+
+div.second-topnav ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 41px;
+    color: #000;
+    padding: 5px 15px;
+
+}
+
+div.second-topnav ul li a:hover {
+    color: #B1040E;
+    border-bottom: 3px solid #B1040E;
+}
+
+main div.section-1 h1 {
+    text-align: center;
+    font-size: 55px;
+    line-height: 69px;
+    color: #000;
+    font-weight: 900;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+main div.section-1 h2 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+main div.section-2 {
+    width: 100%;
+    margin: auto 10px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+main div.section-2 img {
+    display: block;
+    width: 95%;
+    margin: 0 30px;
+}
+
+main div.section-3 {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+main div.section-3 div {
+    margin: 50px 0;
+    width: 40%;
+    text-align: center;
+
+}
+
+main div.section-3 div h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+
+
+/*############ IPad ##########*/
+
+@media only screen and (max-width: 800px) {
+    .topnav .topnav-heading {
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .topnav ul li:not(:nth-child(6)) {
+        display: none;
+    }
+
+
+
+    div.topnav ul li.hide {
+        display: inline-block;
+    }
+
+    div.topnav ul {
+        margin-right: 0;
+    }
+
+    div.second-topnav ul li a {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px 8px;
+
+    }
+}
+
+/*############ Mobile ##########*/
+
+@media only screen and (max-width: 680px) {
+    .topnav .hide {
+        display: none;
+    }
 }
